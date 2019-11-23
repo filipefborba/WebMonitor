@@ -1,0 +1,36 @@
+{
+
+  "manifest_version": 2,
+  "name": "WebMonitor",
+  "version": "1.0",
+  "description": "Extension that monitors possible malicious activity in your browser.",
+
+  "icons": {
+    "48": "icons/rodolfo48.png",
+    "96": "icons/rodolfo96.png"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "16": "icons/rodolfo16.png",
+      "32": "icons/rodolfo32.png"
+    },
+    "default_title": "WebMonitor",
+    "default_popup": "popup/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/webmonitor.js"]
+    }
+  ],
+
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": true
+  },
+
+  "permissions": ["tabs", "storage", "*://*/*", "cookies", "webRequest"] 
+}
