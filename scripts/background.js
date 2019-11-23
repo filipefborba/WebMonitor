@@ -42,7 +42,7 @@ function cookieUpdate() {
 		var gettingAll = browser.cookies.getAll({ url: tabs[0].url });
 		gettingAll.then(cookies => {
 			if (cookies.length > 0) {
-				total_cookies = `${cookies.length} items found in Local Storage.`;
+				total_cookies = `${cookies.length} items found in Cookies.`;
 			} else {
 				total_cookies = "No items found in Cookies.";
 			}
