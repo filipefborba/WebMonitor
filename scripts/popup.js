@@ -1,12 +1,3 @@
-// // function getConnections() {
-// // 	browser.runtime.sendMessage(
-// // 		{ connections: "Send me the connections, background.js!" },
-// // 		function(response) {
-// // 			console.log(response.tabName);
-// // 			document.getElementById("website").innerHTML = response.tabName;
-// // 			document.getElementById(
-// // 				"external-connections"
-// // 			).innerHTML = `${response.third_party_connections} / ${response.total_connections}`;
 function updatePopup() {
 	document.getElementById("website").innerHTML = "Website: --";
 	document.getElementById("external-connections").innerHTML =
